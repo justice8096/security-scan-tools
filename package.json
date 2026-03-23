@@ -1,0 +1,26 @@
+{
+  "name": "security-scan-tools",
+  "version": "1.0.0",
+  "description": "Unified security scanning — OWASP LLM Top 10, dependency CVEs, SAST patterns, and secrets detection with compliance-config.json integration",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "security-scan": "src/cli.js"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./owasp": "./src/scanners/owasp-llm.js",
+    "./deps": "./src/scanners/dependency-audit.js",
+    "./sast": "./src/scanners/sast-patterns.js",
+    "./secrets": "./src/scanners/secrets-detector.js"
+  },
+  "scripts": {
+    "test": "vitest run"
+  },
+  "author": "Justice",
+  "license": "MIT",
+  "keywords": ["security", "OWASP", "CVE", "SAST", "vulnerability", "audit", "compliance", "LLM"],
+  "devDependencies": {
+    "vitest": "^3.0.0"
+  }
+}
